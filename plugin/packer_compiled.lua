@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["argtextobj.vim"] = {
+    loaded = true,
+    path = "/Users/kazuki.oshino/.local/share/nvim/site/pack/packer/start/argtextobj.vim",
+    url = "https://github.com/vim-scripts/argtextobj.vim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/kazuki.oshino/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -89,11 +94,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/kazuki.oshino/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["vimdoc-ja"] = {
-    loaded = true,
-    path = "/Users/kazuki.oshino/.local/share/nvim/site/pack/packer/start/vimdoc-ja",
-    url = "https://github.com/vim-jp/vimdoc-ja"
   }
 }
 
