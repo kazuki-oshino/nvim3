@@ -84,6 +84,16 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/kazuki.oshino/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/Users/kazuki.oshino/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["vimdoc-ja"] = {
+    loaded = true,
+    path = "/Users/kazuki.oshino/.local/share/nvim/site/pack/packer/start/vimdoc-ja",
+    url = "https://github.com/vim-jp/vimdoc-ja"
   }
 }
 
