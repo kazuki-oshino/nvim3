@@ -17,3 +17,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank({ higroup = 'YankHighlight', timeout = 200 })
   end,
 })
+
+
+vim.opt.clipboard:append({"unnamedplus"})
