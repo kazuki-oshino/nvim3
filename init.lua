@@ -7,11 +7,13 @@ else
     vim.opt.relativenumber = true
 end
 
+-- plugins.luaを保存したらPackerCompileを実行する
 vim.api.nvim_create_autocmd("BufWritePost", {
     pattern = { "plugins.lua" },
     command = "PackerCompile",
 })
 
+-- yank highlightの設定
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#FF1493" })
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
@@ -20,4 +22,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-vim.opt.clipboard:append({"unnamedplus"})
+-- timeoutlenの設定
+vim.o.timeoutlen = 3000
+
+-- clipboardに追加する
+vim.opt.clipboard:append("unnamedplus")
