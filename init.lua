@@ -15,6 +15,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
+vim.opt.whichwrap = "b,s,h,l,<,>,[,],~"
 
 -- yank highlightの設定
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#FF1493" })
