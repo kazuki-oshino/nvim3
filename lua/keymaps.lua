@@ -1,8 +1,9 @@
 if vim.g.vscode then
-
+    local vscode = require('vscode')
+    vim.keymap.set('n', 'gi', function() vscode.call('editor.action.goToReferences') end)
+    vim.keymap.set('n', 'gr', function() vscode.call('workbench.action.openRecent') end)
 else
-    vim.opt.number = true
-    vim.opt.relativenumber = true
+    -- vscode以外で必要に応じて追記
 end
 
 vim.g.mapleader = " "

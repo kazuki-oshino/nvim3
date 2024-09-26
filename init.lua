@@ -3,6 +3,8 @@ require('keymaps')
 if vim.g.vscode then
 else
     require('lualine_start')
+    vim.opt.number = true
+    vim.opt.relativenumber = true
 end
 
 vim.api.nvim_create_autocmd("BufWritePost", {
