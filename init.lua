@@ -13,6 +13,9 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     command = "PackerCompile",
 })
 
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
+
 -- yank highlightの設定
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#FF1493" })
 vim.api.nvim_create_autocmd("TextYankPost", {
