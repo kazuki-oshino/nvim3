@@ -2,7 +2,7 @@ require('plugins')
 require('keymaps')
 if vim.g.vscode then
 else
-  require('lualine').setup()
+  require('lualine_start').setup()
   vim.opt.number = true
   vim.opt.relativenumber = true
 end
