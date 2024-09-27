@@ -2,15 +2,15 @@ require('plugins')
 require('keymaps')
 if vim.g.vscode then
 else
-    require('lualine_start')
-    vim.opt.number = true
-    vim.opt.relativenumber = true
+  require('lualine').setup()
+  vim.opt.number = true
+  vim.opt.relativenumber = true
 end
 
 -- plugins.luaを保存したらPackerCompileを実行する
 vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = { "plugins.lua" },
-    command = "PackerCompile",
+  pattern = { "plugins.lua" },
+  command = "PackerCompile",
 })
 
 vim.opt.smartcase = true
