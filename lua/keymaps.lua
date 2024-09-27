@@ -1,9 +1,10 @@
 if vim.g.vscode then
     local vscode = require('vscode')
     vim.keymap.set('n', 'gi', function() vscode.call('editor.action.goToReferences') end)
-    vim.keymap.set('n', 'gr', function() vscode.call('workbench.action.openRecent') end)
+    vim.keymap.set('n', 'go', function() vscode.call('workbench.action.openRecent') end)
     vim.keymap.set('n', 'gj', function() vscode.call('workbench.action.terminal.focus') end)
     vim.keymap.set('n', 'gt', function() vscode.call('editor.action.goToTypeDefinition') end)
+    vim.keymap.set('n', 'gp', function() vscode.call('workbench.action.showCommands') end)
 else
     -- vscode以外で必要に応じて追記
 end
