@@ -1,6 +1,6 @@
 if vim.g.vscode then
     local vscode = require('vscode')
-    vim.keymap.set('n', 'gi', function() vscode.call('editor.action.goToReferences') end)
+    vim.keymap.set('n', 'gi', function() vscode.call('editor.action.goToImplementation') end)
     vim.keymap.set('n', 'go', function() vscode.call('workbench.action.openRecent') end)
     vim.keymap.set('n', 'gj', function() vscode.call('workbench.action.terminal.focus') end)
     vim.keymap.set('n', 'gt', function() vscode.call('editor.action.goToTypeDefinition') end)
