@@ -5,6 +5,7 @@ if vim.g.vscode then
     vim.keymap.set('n', 'gj', function() vscode.call('workbench.action.terminal.focus') end)
     vim.keymap.set('n', 'gt', function() vscode.call('editor.action.goToTypeDefinition') end)
     vim.keymap.set('n', 'gp', function() vscode.call('workbench.action.showCommands') end)
+    vim.keymap.set('n', 'gw', function() vscode.call('projectsExplorerFavorites.focus') end)
 else
     -- vscode以外で必要に応じて追記
 end
