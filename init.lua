@@ -2,7 +2,7 @@ require('plugins')
 require('keymaps')
 if vim.g.vscode then
 else
-  require('lualine_start').setup()
+  -- require('lualine_start').setup()
   vim.opt.number = true
   vim.opt.relativenumber = true
 end
@@ -31,3 +31,6 @@ vim.o.timeoutlen = 3000
 
 -- clipboardに追加する
 vim.opt.clipboard:append("unnamedplus")
+
+-- 矩形選択の設定
+vim.opt.virtualedit = "block"  -- 矩形選択時に文字が存在しない場所も選択可能に
