@@ -24,5 +24,5 @@ vim.keymap.set('n', '<Home>', '^')
 
 vim.keymap.set('v', '<Home>', '^')
 vim.keymap.set('v', 'x', '"_x')
-vim.keymap.set('v', 'd', '"_d')
-vim.keymap.set('v', 'c', '"_c')
+-- vim.keymap.set('v', 'd', '"_d')
+-- vim.keymap.set('v', 'c', '"_c')
