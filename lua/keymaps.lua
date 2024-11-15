@@ -7,6 +7,7 @@ if vim.g.vscode then
     vim.keymap.set('n', 'gp', function() vscode.call('workbench.action.showCommands') end)
     vim.keymap.set('n', 'gw', function() vscode.call('projectsExplorerFavorites.focus') end)
     vim.keymap.set('n', 'ga', function() vscode.call('editor.action.quickFix') end)
+    vim.keymap.set('n', 's', function() vscode.call('jumpy2.toggle') end)
 else
     -- vscode以外で必要に応じて追記
 end
