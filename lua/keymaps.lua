@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 if vim.g.vscode then
     local vscode = require('vscode')
     vim.keymap.set('n', 'gi', function() vscode.call('editor.action.goToImplementation') end)
@@ -8,11 +10,11 @@ if vim.g.vscode then
     vim.keymap.set('n', 'gw', function() vscode.call('projectsExplorerFavorites.focus') end)
     vim.keymap.set('n', 'ga', function() vscode.call('editor.action.quickFix') end)
     vim.keymap.set('n', 's', function() vscode.call('jumpy2.toggle') end)
+    vim.keymap.set('n', '<Leader>a', function() vscode.call('currentFilePath.copy') end)
 else
     -- vscode以外で必要に応じて追記
 end
 
-vim.g.mapleader = " "
 vim.keymap.set('n', '<Space>', '<Nop>')
 vim.keymap.set('n', '<Leader>u', '<C-r>')
 vim.keymap.set('n', 'x', '"_x')
