@@ -9,6 +9,7 @@ if vim.g.vscode then
     vim.keymap.set('n', 'gp', function() vscode.call('workbench.action.showCommands') end)
     vim.keymap.set('n', 'gw', function() vscode.call('projectsExplorerFavorites.focus') end)
     vim.keymap.set('n', 'ga', function() vscode.call('editor.action.quickFix') end)
+    vim.keymap.set('n', 'gk', function() vscode.call('bookmarks.toggle') end)
     vim.keymap.set('n', 's', function() vscode.call('jumpy2.toggle') end)
     vim.keymap.set('n', '<Leader>a', function() vscode.call('currentFilePath.copy') end)
 else
