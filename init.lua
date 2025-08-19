@@ -1,6 +1,14 @@
 require('plugins')
 require('keymaps')
 if vim.g.vscode then
+  vim.api.nvim_create_autocmd('InsertEnter', {
+    callback = function()
+      vim.defer_fn(function()
+        -- スペースキーを1回入力してすぐ削除（日本語入力バグ回避用）
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Space><BS>', true, false, true), 'n', false)
+      end, 10)
+    end,
+  })
 else
   -- require('lualine_start').setup()
   vim.opt.number = true
