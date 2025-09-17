@@ -15,6 +15,9 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    -- 以下が必要
+    -- brew tap laishulu/homebrew
+    -- brew install macism
     use {
         "keaising/im-select.nvim",
         config = function()
