@@ -42,3 +42,4 @@ vim.opt.clipboard:append("unnamedplus")
 
 -- 矩形選択の設定
 vim.opt.virtualedit = "block"  -- 矩形選択時に文字が存在しない場所も選択可能に
+
