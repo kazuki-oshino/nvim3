@@ -13,7 +13,18 @@ if vim.g.vscode then
     vim.keymap.set('n', 's', function() vscode.call('jumpy2.toggle') end)
     vim.keymap.set('n', '<Leader>a', function() vscode.call('currentFilePath.copy') end)
 else
-    -- vscode以外で必要に応じて追記
+    -- Telescope キーマップ (プラグインがインストールされている場合のみ)
+    local ok, builtin = pcall(require, 'telescope.builtin')
+    if ok then
+        vim.keymap.set('n', 'gf', builtin.find_files, { desc = 'ファイル検索' })
+        vim.keymap.set('n', 'gg', builtin.live_grep, { desc = 'テキスト検索 (grep)' })
+        vim.keymap.set('n', 'gb', builtin.buffers, { desc = 'バッファ一覧' })
+        vim.keymap.set('n', 'gh', builtin.help_tags, { desc = 'ヘルプ検索' })
+    end
+
+    -- nvim-tree キーマップ
+    vim.keymap.set('n', 'ge', ':NvimTreeToggle<CR>', { desc = 'ファイルツリー', silent = true })
+    vim.keymap.set('n', 'gE', ':NvimTreeFindFile<CR>', { desc = '現在のファイルをツリーで表示', silent = true })
 end
 
 vim.keymap.set('n', '<Space>', '<Nop>')

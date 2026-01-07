@@ -63,4 +63,23 @@ return require('packer').startup(function(use)
     -- スニペット
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
+
+    -- Telescope (ファジーファインダー)
+    use {
+        'nvim-telescope/telescope.nvim',
+        branch = '0.1.x',
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
+
+    -- Treesitter (シンタックスハイライト強化)
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
+    -- nvim-tree (ファイルエクスプローラー)
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
 end)

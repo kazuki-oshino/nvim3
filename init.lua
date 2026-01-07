@@ -13,6 +13,9 @@ else
   require('lualine_start')
   require('lsp')
   require('cmp_config')
+  require('telescope_config')
+  require('treesitter_config')
+  require('nvimtree_config')
   
   -- catppuccin カラースキーム適用
   vim.cmd.colorscheme('catppuccin')
