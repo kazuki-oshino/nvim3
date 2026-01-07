@@ -17,7 +17,7 @@ else
     local ok, builtin = pcall(require, 'telescope.builtin')
     if ok then
         vim.keymap.set('n', 'gf', builtin.find_files, { desc = 'ファイル検索' })
-        vim.keymap.set('n', 'gg', builtin.live_grep, { desc = 'テキスト検索 (grep)' })
+        vim.keymap.set('n', '<Leader>f', builtin.live_grep, { desc = 'テキスト検索 (grep)' })
         vim.keymap.set('n', 'gb', builtin.buffers, { desc = 'バッファ一覧' })
         vim.keymap.set('n', 'gh', builtin.help_tags, { desc = 'ヘルプ検索' })
     end
