@@ -11,6 +11,8 @@ if vim.g.vscode then
   })
 else
   require('lualine_start')
+  require('lsp')
+  require('cmp_config')
   
   -- catppuccin カラースキーム適用
   vim.cmd.colorscheme('catppuccin')

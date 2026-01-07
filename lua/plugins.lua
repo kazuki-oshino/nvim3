@@ -48,4 +48,19 @@ return require('packer').startup(function(use)
         })
         end,
     }
+
+    -- LSP関連
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+
+    -- 補完エンジン
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+
+    -- スニペット
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
 end)
