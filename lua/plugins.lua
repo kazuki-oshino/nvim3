@@ -15,6 +15,20 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    -- catppuccin カラースキーム
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin',
+        config = function()
+            require('catppuccin').setup({
+                flavour = 'mocha',
+                transparent_background = true,
+                integrations = {
+                    native_lsp = { enabled = true },
+                },
+            })
+        end,
+    }
     -- 以下が必要
     -- brew tap laishulu/homebrew
     -- brew install macism

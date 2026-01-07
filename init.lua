@@ -10,9 +10,24 @@ if vim.g.vscode then
     end,
   })
 else
-  -- require('lualine_start').setup()
+  require('lualine_start')
+  
+  -- catppuccin カラースキーム適用
+  vim.cmd.colorscheme('catppuccin')
+  
+  -- 背景透過（Ghosttyの透過と連携）
+  vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+  
+  -- 24bitカラー有効化
+  vim.opt.termguicolors = true
+  
+  -- 行番号
   vim.opt.number = true
   vim.opt.relativenumber = true
+  
+  -- カーソルライン強調
+  vim.opt.cursorline = true
 end
 
 -- plugins.luaを保存したらPackerCompileを実行する
