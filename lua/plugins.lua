@@ -81,4 +81,10 @@ return require('packer').startup(function(use)
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' }
     }
+
+    -- lazygit (Git UI)
+    use {
+        'kdheepak/lazygit.nvim',
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
 end)

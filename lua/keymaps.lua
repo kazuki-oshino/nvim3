@@ -25,6 +25,9 @@ else
     -- nvim-tree キーマップ
     vim.keymap.set('n', 'ge', ':NvimTreeToggle<CR>', { desc = 'ファイルツリー', silent = true })
     vim.keymap.set('n', 'gE', ':NvimTreeFindFile<CR>', { desc = '現在のファイルをツリーで表示', silent = true })
+
+    -- lazygit キーマップ
+    vim.keymap.set('n', '<Leader>g', ':LazyGit<CR>', { desc = 'LazyGit起動', silent = true })
 end
 
 vim.keymap.set('n', '<Space>', '<Nop>')
