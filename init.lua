@@ -24,6 +24,10 @@ else
   vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
   vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
   
+  -- 行番号の色を見やすく設定
+  vim.api.nvim_set_hl(0, 'LineNr', { fg = '#7f849c', bg = 'NONE' })  -- 通常の行番号
+  vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#fab387', bg = 'NONE', bold = true })  -- 現在行の番号
+  
   -- 24bitカラー有効化
   vim.opt.termguicolors = true
   
