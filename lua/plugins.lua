@@ -84,4 +84,31 @@ return {
     'kdheepak/lazygit.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
+
+  -- flash.nvim (高速ジャンプ)
+  {
+    'folke/flash.nvim',
+    event = 'VeryLazy',
+    opts = {
+      -- ラベルを日本語キーボードでも押しやすい文字に
+      labels = 'asdfghjklqwertyuiopzxcvbnm',
+      modes = {
+        -- 通常のジャンプモード
+        char = {
+          enabled = true,
+          jump_labels = true,
+        },
+        -- 検索時にもflashを使用
+        search = {
+          enabled = true,
+        },
+      },
+    },
+    keys = {
+      { 's', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash' },
+      { 'S', mode = { 'n', 'x', 'o' }, function() require('flash').treesitter() end, desc = 'Flash Treesitter' },
+      { 'r', mode = 'o', function() require('flash').remote() end, desc = 'Remote Flash' },
+      { 'R', mode = { 'o', 'x' }, function() require('flash').treesitter_search() end, desc = 'Treesitter Search' },
+    },
+  },
 }
