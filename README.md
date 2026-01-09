@@ -13,37 +13,52 @@ brew install macism
 
 ### 2. プラグインのインストール
 
-Neovim を起動して以下を実行：
+Neovim を起動すると lazy.nvim が自動的にプラグインをインストールします。
+
+手動で管理画面を開く場合：
 
 ```vim
-:PackerInstall
+:Lazy
 ```
 
-## Packer コマンド一覧
+## lazy.nvim コマンド一覧
 
-| コマンド         | 説明                                     |
-| ---------------- | ---------------------------------------- |
-| `:PackerInstall` | 未インストールのプラグインをインストール |
-| `:PackerUpdate`  | プラグインを更新                         |
-| `:PackerSync`    | Install + Update + Compile を一括実行    |
-| `:PackerClean`   | 不要なプラグインを削除                   |
-| `:PackerCompile` | `packer_compiled.lua` を再生成           |
-| `:PackerStatus`  | インストール済みプラグインの状態を表示   |
+| コマンド        | 説明                                     |
+| --------------- | ---------------------------------------- |
+| `:Lazy`         | 管理画面を開く                           |
+| `:Lazy sync`    | Install + Update + Clean を一括実行      |
+| `:Lazy update`  | プラグインを更新                         |
+| `:Lazy install` | 未インストールのプラグインをインストール |
+| `:Lazy clean`   | 不要なプラグインを削除                   |
+| `:Lazy check`   | 更新があるか確認                         |
 
-> **Note**: `plugins.lua` を保存すると自動で `PackerCompile` が実行されます。
+### 管理画面のキー操作
+
+| キー | 操作                |
+| ---- | ------------------- |
+| `S`  | Sync（一括同期）    |
+| `U`  | Update（更新）      |
+| `I`  | Install             |
+| `C`  | Check               |
+| `X`  | Clean               |
+| `?`  | ヘルプ              |
+| `q`  | 画面を閉じる        |
 
 ### プラグインを追加・削除したとき
 
-`plugins.lua` を編集したら **`:PackerSync`** を実行すればOK。
-
-- 新しいプラグインをインストール
-- 削除されたプラグインをクリーン
-- `packer_compiled.lua` を再生成
-
-これらを一括で行ってくれます。
+`plugins.lua` を編集したら **`:Lazy sync`** を実行すればOK。
 
 ## 使用プラグイン
 
-- **catppuccin** - カラースキーム（mocha flavour、透過背景対応）
-- **lualine** - ステータスライン
-- **im-select** - ノーマルモード時の自動 IM 切り替え
+| カテゴリ             | プラグイン                         |
+| -------------------- | ---------------------------------- |
+| カラースキーム       | catppuccin（mocha、透過背景対応）  |
+| ステータスライン     | lualine                            |
+| IM 切り替え          | im-select                          |
+| LSP                  | nvim-lspconfig, mason              |
+| 補完                 | nvim-cmp                           |
+| スニペット           | LuaSnip                            |
+| ファジーファインダー | telescope                          |
+| シンタックス         | nvim-treesitter                    |
+| ファイルツリー       | nvim-tree                          |
+| Git                  | lazygit.nvim                       |
