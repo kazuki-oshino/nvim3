@@ -21,6 +21,10 @@ telescope.setup({
                 preview_width = 0.5,
             },
         },
+        -- プレビューでのtreesitterハイライトを無効化（Neovim 0.11互換性問題回避）
+        preview = {
+            treesitter = false,
+        },
         -- キーマッピング
         mappings = {
             -- Insertモード (入力中)

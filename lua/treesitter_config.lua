@@ -18,6 +18,7 @@ configs.setup({
         "html",
         "css",
         "markdown",
+        "markdown_inline",
         "bash",
     },
     -- パーサーを自動インストール
@@ -26,6 +27,8 @@ configs.setup({
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
+        -- マークダウンはNeovim 0.11との互換性問題があるため無効化
+        disable = { "markdown", "markdown_inline" },
     },
     -- インデント
     indent = {
