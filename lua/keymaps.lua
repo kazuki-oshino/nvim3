@@ -17,17 +17,19 @@ else
     local ok, builtin = pcall(require, 'telescope.builtin')
     if ok then
         vim.keymap.set('n', 'gf', builtin.find_files, { desc = 'ファイル検索' })
-        vim.keymap.set('n', '<Leader>f', builtin.live_grep, { desc = 'テキスト検索 (grep)' })
+        vim.keymap.set('n', '<Leader>f', builtin.help_tags, { desc = 'ヘルプ検索' })
         vim.keymap.set('n', 'gb', builtin.buffers, { desc = 'バッファ一覧' })
-        vim.keymap.set('n', 'gh', builtin.help_tags, { desc = 'ヘルプ検索' })
+        vim.keymap.set('n', 'gh', builtin.live_grep, { desc = 'テキスト検索 (grep)' })
     end
 
     -- nvim-tree キーマップ
-    vim.keymap.set('n', '<Leader>1', ':NvimTreeToggle<CR>', { desc = 'ファイルツリー', silent = true })
+    vim.keymap.set('n', 'go', ':NvimTreeFocus<CR>', { desc = 'ファイルツリー', silent = true })
+    vim.keymap.set('n', 'gO', '<C-w>p', { desc = '前のウィンドウに戻る' })
     vim.keymap.set('n', 'gE', ':NvimTreeFindFile<CR>', { desc = '現在のファイルをツリーで表示', silent = true })
 
     -- lazygit キーマップ
     vim.keymap.set('n', '<Leader>g', ':LazyGit<CR>', { desc = 'LazyGit起動', silent = true })
+    vim.keymap.set('n', 'ga', ':LazyGit<CR>', { desc = 'LazyGit起動', silent = true })
 end
 
 vim.keymap.set('n', '<Space>', '<Nop>')
