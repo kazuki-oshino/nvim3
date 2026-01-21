@@ -76,6 +76,7 @@ nvimtree.setup({
     -- ファイルフィルタ
     filters = {
         dotfiles = false,  -- 隠しファイルを表示
+        git_ignored = false,  -- gitignoreされたファイルも表示
         custom = { ".DS_Store" },
     },
     -- ファイル変更時に自動リロード
