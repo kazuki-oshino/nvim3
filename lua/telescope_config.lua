@@ -45,5 +45,11 @@ telescope.setup({
         find_files = {
             hidden = true,  -- 隠しファイルも表示
         },
+        live_grep = {
+            additional_args = { "--hidden" },  -- 隠しファイル・ディレクトリも検索対象に
+        },
+        grep_string = {
+            additional_args = { "--hidden" },  -- 隠しファイル・ディレクトリも検索対象に
+        },
     },
 })
