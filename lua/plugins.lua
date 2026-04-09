@@ -26,7 +26,6 @@ return {
         transparent_background = true,
         integrations = {
           native_lsp = { enabled = true },
-          render_markdown = { enabled = true },
         },
       })
     end,
@@ -84,14 +83,6 @@ return {
   {
     'kdheepak/lazygit.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
-  },
-
-  -- render-markdown (Markdownレンダリング)
-  {
-    'MeanderingProgrammer/render-markdown.nvim',
-    ft = { 'markdown' },
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
-    opts = {},
   },
 
   -- flash.nvim (高速ジャンプ)

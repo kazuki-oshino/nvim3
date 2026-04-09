@@ -27,9 +27,6 @@ else
     vim.keymap.set('n', 'gO', '<C-w>p', { desc = '前のウィンドウに戻る' })
     vim.keymap.set('n', 'gE', ':NvimTreeFindFile<CR>', { desc = '現在のファイルをツリーで表示', silent = true })
 
-    -- render-markdown キーマップ
-    vim.keymap.set('n', '<Leader>m', ':RenderMarkdown toggle<CR>', { desc = 'Markdownレンダリング切替', silent = true })
-
     -- lazygit キーマップ
     vim.keymap.set('n', '<Leader>g', ':LazyGit<CR>', { desc = 'LazyGit起動', silent = true })
     vim.keymap.set('n', 'ga', ':LazyGit<CR>', { desc = 'LazyGit起動', silent = true })
