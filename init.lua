@@ -24,15 +24,15 @@ if vim.g.vscode then
     end,
   })
 else
+  -- catppuccin カラースキーム適用（lualineより先に読み込む必要あり）
+  vim.cmd.colorscheme('catppuccin')
+
   require('lualine_start')
   require('lsp')
   require('cmp_config')
   require('telescope_config')
   require('treesitter_config')
   require('nvimtree_config')
-  
-  -- catppuccin カラースキーム適用
-  vim.cmd.colorscheme('catppuccin')
   
   -- 背景透過（Ghosttyの透過と連携）
   vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
@@ -52,12 +52,6 @@ else
   -- カーソルライン強調
   vim.opt.cursorline = true
 end
-
--- plugins.luaを保存したらPackerCompileを実行する
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "plugins.lua" },
-  command = "PackerCompile",
-})
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
