@@ -40,6 +40,7 @@ vim.keymap.set('n', '<ESC><ESC>', ':nohlsearch<CR><ESC>')
 -- vim.keymap.set('n', '`', 'M')
 vim.keymap.set('n', '<Home>', '^')
 vim.keymap.set('n', 'R', '<Plug>(operator-replace)')
+vim.keymap.set('n', '<Leader>yf', '?^```<CR>jV/^```<CR>k"+y', { desc = 'コードフェンス内をコピー', silent = true })
 -- vim.keymap.set('n', 'y', '<Plug>(operator-stay-cursor-yank)')
 
 vim.keymap.set('v', '<Space>', '<Nop>')
